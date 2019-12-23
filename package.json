@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "sideEffects": ["*.css", "./src/main.js"],
   "dependencies": {
     "lodash": "^4.17.15"
   },
@@ -26,6 +27,6 @@
     "start": "webpack-dev-server --open",
     "server": "node server.js"
   },
-  "author": "",
+  "author": "pengji",
   "license": "ISC"
 }
