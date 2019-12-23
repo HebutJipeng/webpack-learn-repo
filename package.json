@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "sideEffects": ["*.css", "./src/main.js"],
+  "sideEffects": [
+    "*.css",
+    "./src/main.js"
+  ],
   "dependencies": {
     "lodash": "^4.17.15"
   },
@@ -18,13 +21,14 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.10.1",
-    "webpack-manifest-plugin": "^2.2.0"
+    "webpack-manifest-plugin": "^2.2.0",
+    "webpack-merge": "^4.2.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "webpack --config webpack.prod.js",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
     "server": "node server.js"
   },
   "author": "pengji",
