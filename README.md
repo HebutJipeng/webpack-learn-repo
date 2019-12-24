@@ -11,10 +11,22 @@
     - worker 池(worker pool) ，thread-loader 可以将非常消耗资源的 loader 分流给一个 worker pool。
     - 持久化缓存， 使用 cache-loader 启用持久化缓存。使用 package.json 中的 "postinstall" 清除缓存目录。
     - 自定义 plugin/loader。 慎用？
-- dev env
+- dev
     - 增量编译
     - 在内存中编译
     - stats.toJson 加速 ， webpack 4 中默认
     - devtool
     - 避免在生产环境下才会用到的工具
     - 最小化 entry chunk
+    - 避免额外的优化步骤 
+    - 输出结果不携带路径信息
+    - Node.js 版本
+    - TypeScript loader 
+- prod
+    - 多个 compilation(编译时)
+    - source map 消耗资源.慎用
+
+- 工具（下列工具存在某些可能会降低构建性能的问题：
+    - Babel
+    - TypeScript 
+    - Sass
